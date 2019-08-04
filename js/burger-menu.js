@@ -1,11 +1,13 @@
 // Бургер
 let mobbar = document.querySelector('.mob-nav-bar');
 let burger = document.querySelector('.button_burger');
-let html = document.documentElement;
+let html = document.querySelectorAll('html, body');
 burger.onclick = function() {
 	mobbar.classList.toggle('activmob-nav-bar');
 	burger.classList.toggle('closemobburger');
-	html.classList.toggle('stopscroll');
+	for(i = 0; i < html.length; i++) {
+		html[i].classList.toggle('stopscroll');
+	}
 }
 // Табы (Дать на проверку)  = переписать под "делегировагие событий"
 let toogletab = document.getElementById('toogletab');

@@ -1,17 +1,18 @@
 // Бургер
-var mobbar = document.querySelector('.mob-nav-bar');
-var burger = document.querySelector('.button_burger');
+let mobbar = document.querySelector('.mob-nav-bar');
+let burger = document.querySelector('.button_burger');
+let body = document.body;
 burger.onclick = function() {
 	mobbar.classList.toggle('activmob-nav-bar');
 	burger.classList.toggle('closemobburger');
-	document.body.classList.toggle('stopscroll');
+	body.classList.toggle('stopscroll');
 }
 // Табы (Дать на проверку)  = переписать под "делегировагие событий"
-var toogletab = document.getElementById('toogletab');
-var toogle = toogletab.querySelectorAll('#tog2, #tog1, #tog3');
-var div = document.querySelectorAll('.tabcontent')
+let toogletab = document.getElementById('toogletab');
+let toogle = toogletab.querySelectorAll('#tog2, #tog1, #tog3');
+let div = document.querySelectorAll('.tabcontent')
 toogletab.onclick = function(e) {
-	var target = e.target; 
+	let target = e.target; 
 	if(target.classList[1] === 'active') return;
 	for (i=0; i < toogletab.children.length; i++) {
     if (toogle[i].classList.contains("active")) {

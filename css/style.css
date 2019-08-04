@@ -42,7 +42,7 @@ header {
 	height: auto;
 }
 .stopscroll {
-	position: relative;
+  position: fixed;
 	overflow: hidden;
 }
 #navbar {

@@ -42,6 +42,9 @@ header {
 	width: 100%;
 	height: auto;
 }
+.stopscroll {
+	overflow: hidden;
+}
 #navbar {
 	padding: 5px 0;
 	display: grid;

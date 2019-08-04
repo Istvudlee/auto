@@ -4,9 +4,7 @@ var burger = document.querySelector('.button_burger');
 burger.onclick = function() {
 	mobbar.classList.toggle('activmob-nav-bar');
 	burger.classList.toggle('closemobburger');
-	if(mobbar.classList[1] === "activmob-nav-bar") {
-		document.body.style.overflow = 'hidden';
-	}
+	document.body.classList.toggle('stopscroll');
 }
 // Табы (Дать на проверку)  = переписать под "делегировагие событий"
 var toogletab = document.getElementById('toogletab');

@@ -1,7 +1,7 @@
 // Бургер
 let mobbar = document.querySelector('.mob-nav-bar');
 let burger = document.querySelector('.button_burger');
-let htdy = document.querySelectorAll;
+let htdy = document.querySelectorAll('html, body');
 burger.onclick = function() {
 	mobbar.classList.toggle('activmob-nav-bar');
 	burger.classList.toggle('closemobburger');

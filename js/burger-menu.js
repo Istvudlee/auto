@@ -4,6 +4,9 @@ var burger = document.querySelector('.button_burger');
 burger.onclick = function() {
 	mobbar.classList.toggle('activmob-nav-bar');
 	burger.classList.toggle('closemobburger');
+	if(mobbar.classList[1] === "activmob-nav-bar") {
+		document.body.style.overflow = 'hidden';
+	}
 }
 // Табы (Дать на проверку)  = переписать под "делегировагие событий"
 var toogletab = document.getElementById('toogletab');
@@ -11,7 +14,7 @@ var toogle = toogletab.querySelectorAll('#tog2, #tog1, #tog3');
 var div = document.querySelectorAll('.tabcontent')
 toogletab.onclick = function(e) {
 	var target = e.target; 
-	if(target.classList === 'active') return;
+	if(target.classList[1] === 'active') return;
 	for (i=0; i < toogletab.children.length; i++) {
     if (toogle[i].classList.contains("active")) {
 			toogle[i].classList.remove("active");
@@ -25,4 +28,4 @@ toogletab.onclick = function(e) {
 	 }
 	}
 }
-// 
+// Stop Scroll

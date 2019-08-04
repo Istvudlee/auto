@@ -538,6 +538,7 @@ header {
 /* endthird */
 /* fourth Screen */
 #fourth {
+	display: none;
 	background: #3C47AE;
 max-width: 1170px; 
 margin: 30px auto;

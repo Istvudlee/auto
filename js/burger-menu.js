@@ -27,5 +27,45 @@ toogletab.onclick = function(e) {
 		div[i].classList.add("visible");
 	 }
 	}
+	return false;
 }
-// Stop Scroll
+// Табы документы(Дать на проверку)  = переписать под "делегировагие событий"
+let toogledoc = document.querySelector('.toogledoc');
+let toogleTagA = toogledoc.querySelectorAll('a');
+let divdoc = document.querySelectorAll('.contentwr');
+toogledoc.onclick = function(e) {
+	let target = e.target; 
+	if(target.classList === 'activetab') return;
+	for (i=0; i < toogledoc.children.length; i++) {
+    if (toogleTagA[i].classList.contains("activetab")) {
+			toogleTagA[i].classList.remove("activetab");
+		}
+	}
+	target.classList.add('activetab');
+  for(i = 0; i < divdoc.length; i++ ) {
+		divdoc[i].classList.remove("show")
+	 if(target.dataset.number === divdoc[i].dataset.number) {
+		divdoc[i].classList.add("show");
+	 }
+	}
+	return false;
+}
+// FAQ
+let faq = document.querySelector('.faq');
+let text = faq.querySelectorAll('.anstext');
+let quest = faq.querySelectorAll('.quest')
+faq.onclick = function(e) {
+	e.preventDefault()
+	let mytarget = e.target;
+	let parent = mytarget.parentNode;
+	let parentdiv = parent.parentNode;
+	if(mytarget.tagName != "SPAN") return;
+	parentdiv.lastElementChild.classList.toggle('anstextshow')
+   for (i = 0; i < text.length; i++) {
+     if(text[i].classList[1]) {
+			quest[i].classList.add('questback')
+	   } else {
+			quest[i].classList.remove('questback')
+		 }
+	 }
+}

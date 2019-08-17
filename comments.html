@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>/* Comments */
+		#comments {
+		 line-height: normal;
+		 width: 100%;
+		 margin-top: 50px;
+		
+		}
+		#comments h3 {
+			text-transform: uppercase;
+			text-align: center;
+			color: #3C47AE;
+			font-family: 'Roboto', sans-serif;
+			font-size: 24px;
+		}
+		.comment_block {
+			max-width: 1170px;
+			margin: 30px auto;
+			position: relative;
+      overflow: hidden;
+		}
+		.slaidcomments {
+			left: 0;
+			position: relative;
+			display: flex;
+			transition: left 250ms;
+			-webkit-transition: left 250ms;
+		}
+		.slide {
+			flex: 0 0 33.333333%;
+      max-width: 33.333333%;
+			background: #eee;
+			border-right: 4px solid #fff;
+		}
+		.slide p {
+			padding: 0px 30px 20px 30px
+		}
+		.slide h5 {
+		 padding: 30px;
+		 text-transform: uppercase;
+		 font-size: 20px;
+		}
+		.lookpdf {
+			background: #3C47AE;
+		}
+		.lookpdf a {
+			padding: 10px 0px 10px 30px;
+			color: #fff;
+			display: block;
+		}
+		.lookpdf a::before {
+			content: '';
+			background-image: url(img/files1.svg);
+			background-size : 35px 35px;
+			background-repeat: no-repeat;
+			line-height: 40px;
+			padding: 10px 25px 10px 20px;
+		}
+		.slide .who {
+			color: #3C47AE;
+			font-size: 14px;
+			font-style: italic;
+		}
+		#arrow_slide {
+			width: 10%;
+			margin: 0px auto;
+			display: flex;
+			justify-content: space-between;
+		}
+		#arrow_slide a{
+		
+
+		}
+	  .leftarr::before {
+			content: '';
+			background-image: url(img/arrl.svg);
+			background-size : 35px 35px;
+			background-repeat: no-repeat;
+			line-height: 35px;
+			padding: 10px 20px 10px 18px;
+		}
+		.rightarr::after {
+			content: '';
+			background-image: url(img/arrr.svg);
+			background-size : 35px 35px;
+			background-repeat: no-repeat;
+			line-height: 35px;
+			padding: 10px 25px 0 14px;
+		}
+		/* end Comments */
+		/* fourth Screen */
+#fourth {
+	width: 100%; 
+	line-height: normal;
+}
+.fourthwr {
+	background: #fff;
+  max-width: 1170px;
+	margin: 50px auto;
+}
+#fourth h3 {
+	color:#3C47AE;
+	text-transform: uppercase;;
+	font-size: 24px;
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 600;
+}
+.toogledoc {
+	width: 150px;
+	display: flex;
+	margin: 30px auto;
+	justify-content: space-between;
+	text-align: center;
+}
+.toogledoc .activetab {
+	color: #000;
+	border-bottom: 4px solid #3C47AE;
+}
+.toogled {
+  text-align: center;
+  padding-bottom: 14px;
+  display: block;
+  flex: 1 auto;
+  color: #3C47AE;
+  border-bottom: 1px solid #cecece;
+}
+.contentwr {
+  display: none;
+}
+.show {
+	display: grid;
+	justify-content: space-between;
+	grid-template-columns: 70% 30%;
+}
+.contentdoc {
+  color: #000;
+}
+.contentdoc ul {
+	margin: 0;
+	padding: 0;
+}
+.contentdoc ul li {
+	list-style: none;
+	padding-top: 4px;
+}
+.contentdoc li {
+ padding-top: 5px;
+}
+/* Forma */
+/* .contentdoc #forma {
+ margin-top: 20px;
+}
+#forma input[type='button'], #forma input[type='tel'] {
+ width: 250px;
+ display: flex;
+ height: 50px;
+ margin-top: 10px;
+}
+#forma input[type='button'] {
+	cursor: pointer;
+	display: block;
+	font-family: 'Rubik', sans-serif;
+	padding: 14px 18px 14px 18px;
+	border: 1px solid #3C47AE;
+	color:#fff;
+	font-size: 16px;
+	margin-top: 20px;
+	width: 250px;
+	background: #3C47AE;
+	text-align: center;
+	text-transform: uppercase;
+	-webkit-transition: all .4s ease-in-out;
+	transition: all .4s ease
+}
+
+#forma input[type='button']:hover {
+	border: 1px solid #3C47AE;
+	color: #3C47AE;
+	background: #fff;
+} */
+/* End Form */
+.zauvkatext {
+	padding-top: 5px;
+	font-size: 18px;
+	font-family: 'Roboto', sans-serif;
+}
+.zauvkatext span {
+	font-size: 24px;
+	color: #3C47AE;
+	font-weight: 600;
+	line-height: normal;
+}
+.wecallyou {
+	font-size: 14px;
+	padding-top: 20px;
+}
+.downipdoc {
+	padding-top: 40px;
+}
+.downipdoc a {
+	font-size: 14px;
+	margin-top: 8px;
+	display: inline-flex;
+	align-items: center;
+	color: #3C47AE;
+	text-decoration: underline;
+}
+.downipdoc span{
+	background-image: url(../img/doc.svg);
+	background-size : 30px 30px;
+	background-repeat: no-repeat;
+  line-height: 30px;
+	padding: 0px 20px 0px 20px;
+	width: 30px;
+	height: 30px;
+} 
+#infobldocument {
+	color: #3C47AE;
+	max-width: 350px;
+	background: #eee;
+	border-left: 4px solid #3C47AE
+}
+.issue span{
+	background-image: url(../img/warranty.svg);
+	background-size : 30px 30px;
+	background-repeat: no-repeat;
+  line-height: 40px;
+	padding: 0px 30px 0px 20px;
+	width: 30px;
+	height: 30px;
+} 
+.issue{
+	padding: 20px;
+	display: inline-flex;
+	align-items: center;
+}
+
+#akcii ul li{
+	padding-top: 16px;
+	list-style: none;
+	font-size: 14px;
+
+ }
+ #akcii ul li span{
+	 padding-bottom: 2px;
+	 border-bottom: 1px dashed #000;
+ }
+#akcii h5{
+	text-transform: uppercase;
+	color: #3C47AE;
+	margin-top: 40px;
+}
+/*  end fourth */
+		</style>
+</head>
+<body>
+	<div id="comments">
+		<h3>Отзывы наших клиентов</h3>
+
+		<div class="comment_block">
+			<div id="arrow_slide">
+						<a href="" class="leftarr"></a> <a href="" class="rightarr"></a>
+			</div>
+			<div class="slaidcomments">
+				<div class="slide">
+					<h5>000 «ТиДжи Сервис»0</h5>
+					<p>Выражает свою признательность группе компаний
+							«Автоконсалтинг» в оперативном и качественном решении злободневного вопроса —
+							Лицензирования пассажирских перевозок по новым правилам.
+					</p>
+					<p>
+							Могу с уверенностью рекомендовать «Автоконсалтинг» и менеджера Сергея, который
+							постоянно был с нами на связи по любому вопросу, связанному с транспортом, обучением,
+							аттестацией ответственных лиц, в том числе по вопросам связанных с соблюдением
+							законодательства в области транспорта.
+					</p>
+					<p  class="who">Генеральный директор: А.А. Шукуров</p>
+					<div class="lookpdf"><a href="img/comments1.pdf" target="_blank					">Смотреть оригинал в формате .pdf</a></div>
+				</div>
+				<div class="slide">
+					<h5>000 «ТиДжи Сервис»1</h5>
+					<p>Выражает свою признательность группе компаний
+							«Автоконсалтинг» в оперативном и качественном решении злободневного вопроса —
+							Лицензирования пассажирских перевозок по новым правилам.
+					</p>
+					<p>
+							Могу с уверенностью рекомендовать «Автоконсалтинг» и менеджера Сергея, который
+							постоянно был с нами на связи по любому вопросу, связанному с транспортом, обучением,
+							аттестацией ответственных лиц, в том числе по вопросам связанных с соблюдением
+							законодательства в области транспорта.
+					</p>
+					<p  class="who">Генеральный директор: А.А. Шукуров</p>
+					<div class="lookpdf"><a href="img/comments1.pdf" target="_blank">Смотреть оригинал в формате .pdf</a></div>
+				</div>
+				<div class="slide">
+					<h5>000 «ТиДжи Сервис»2</h5>
+					<p>Выражает свою признательность группе компаний
+							«Автоконсалтинг» в оперативном и качественном решении злободневного вопроса —
+							Лицензирования пассажирских перевозок по новым правилам.
+					</p>
+					<p>
+							Могу с уверенностью рекомендовать «Автоконсалтинг» и менеджера Сергея, который
+							постоянно был с нами на связи по любому вопросу, связанному с транспортом, обучением,
+							аттестацией ответственных лиц, в том числе по вопросам связанных с соблюдением
+							законодательства в области транспорта.
+					</p>
+					<p  class="who">Генеральный директор: А.А. Шукуров</p>
+					<div class="lookpdf"><a href="img/comments1.pdf" target="_blank					">Смотреть оригинал в формате .pdf</a></div>
+				</div>
+				<div class="slide">
+					<h5>000 «ТиДжи Сервис»3</h5>
+					<p>Выражает свою признательность группе компаний
+							«Автоконсалтинг» в оперативном и качественном решении злободневного вопроса —
+							Лицензирования пассажирских перевозок по новым правилам.
+					</p>
+					<p>
+							Могу с уверенностью рекомендовать «Автоконсалтинг» и менеджера Сергея, который
+							постоянно был с нами на связи по любому вопросу, связанному с транспортом, обучением,
+							аттестацией ответственных лиц, в том числе по вопросам связанных с соблюдением
+							законодательства в области транспорта.
+					</p>
+					<p  class="who">Генеральный директор: А.А. Шукуров</p>
+					<div class="lookpdf"><a href="img/comments1.pdf" target="_blank					">Смотреть оригинал в формате .pdf</a></div>
+				</div>
+				<div class="slide">
+					<h5>000 «ТиДжи Сервис»4</h5>
+					<p>Выражает свою признательность группе компаний
+							«Автоконсалтинг» в оперативном и качественном решении злободневного вопроса —
+							Лицензирования пассажирских перевозок по новым правилам.
+					</p>
+					<p>
+							Могу с уверенностью рекомендовать «Автоконсалтинг» и менеджера Сергея, который
+							постоянно был с нами на связи по любому вопросу, связанному с транспортом, обучением,
+							аттестацией ответственных лиц, в том числе по вопросам связанных с соблюдением
+							законодательства в области транспорта.
+					</p>
+					<p  class="who">Генеральный директор: А.А. Шукуров</p>
+					<div class="lookpdf"><a href="img/comments1.pdf" target="_blank					">Смотреть оригинал в формате .pdf</a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- блок документы -->
+	<div id="fourth">
+
+		<div class="fourthwr">
+			 <h3>Документы для получения лицензии</h3>
+				<div class="toogledoc">
+					<a href="#id5"  data-number="1" class="toogled activetab">Для ИП</a>
+				 <a href="#id4"  data-number="2" class="toogled">Для ООО</a>
+			 </div>
+		<div data-number="1" class="contentwr show"> 
+			<div class="contentdoc">
+				 <ul>
+						 <li><b>1.</b> Паспорт индивидуального предпринимателя с пропиской</li>
+						 <li><b>2.</b> Документ, подтверждающий прохождение аттестации на право занимать должность, связанную с обеспечением безопасности дорожного движения</li>
+						 <li><b>3.</b> Свидетельство о государственной регистрации ИП</li>
+						 <li><b>4.</b> Выписка из ЕГРИП</li>
+						 <li><b>5.</b> Технический паспорт транспортного средства - ТП</li>
+						 <li><b>6.</b> паспорт транспортного средства – ПТС</li>
+						 <li><b>7.</b> свидетельство о регистрации транспортного средства - СТС</li>
+						 <li><b>8.</b> диагностическая карта о пройденном транспортным средством техосмотре</li>
+						 <li><b>9.</b> страховой полис ТС</li>
+						 <li><b>10.</b> водительское удостоверения</li>
+						 <li><b>11.</b> трудовые книжки водителей</li>
+						 <li><b>12.</b> справки о прохождении водителями медкомиссии</li>
+						 <li><b>13.</b> Документы, подтверждающие возможность осуществлять техническое обслуживание и ремонт транспортных средств</li>
+						 <li><b>14.</b> документ об оплате гос.пошлины</li>
+					 </ul>
+		 </div>
+		 <div class="contentdoc twobldoc" > 
+			 <div id="infobldocument"> 
+						 <p class="issue"><span></span>Для ИП выдано за период 2018-19  - 210 лицензий</p>
+			 </div>
+				<div id="akcii">
+					<h5>Преимущества:</h5>
+					<ul>
+					 <li> <span>- оформление  в кратчайшие сроки.</span></li>
+					 <li> <span>- официальное оформление</span></li>
+					 <li> <span>- полное сопровождение документов.</span></li>
+				</ul> </div>
+				<p class="downipdoc"> Весь список одним файлом: <a href="IPdoc.docx"><span></span>Скачть в формате .doc</a></p>
+		 </div>
+	 </div>
+	 <div data-number="2" class="contentwr"> 
+			 <div class="contentdoc">
+					 <ul>
+							 <li><b>1.</b> Копия Устава предприятия</li>
+							 <li><b>2.</b> Копии решения или соглашения между учредителями</li>
+							 <li><b>3.</b> Свидетельство ИНН</li>
+							 <li><b>4.</b> Свидетельство ОГРН,</li>
+							 <li><b>5.</b> Выписка из ЕГРЮЛ</li>
+							 <li><b>6.</b> Приказ о назначении на должность руководителя</li>
+							 <li><b>7.</b> Копия всех страниц паспорта руководителя</li>
+							 <li><b>8.</b> Статистические коды</li>
+							 <li><b>9.</b> Документы, подтверждающие возможность осуществлять техническое обслуживание и ремонт транспортных средств</li>
+							 <li><b>10.</b> Документ, подтверждающий прохождение аттестации на право занимать должность, связанную с обеспечением безопасности дорожного движения</li>
+							 <li><b>11.</b> Паспорт должностного лица, отвечающего за безопасность маршрутов пассажирских перевозок</li>
+							 <li><b>12.</b> Договор с медучреждением, обслуживающим водительский состав Диплом медика, проводящего регулярные медосмотры водителей</li>
+							 <li><b>13.</b> Документы на  водителей по которым они приняты в компанию людей</li>
+							 <li><b>14.</b> Документы на автомобили</li>
+					 </ul>
+			 </div>
+			 <div class="contentdoc twobldoc"> 
+				 <div id="infobldocument"> 
+							 <p class="issue"><span></span>Для ООО выдано за период 2018-19  - 110 лицензий</p>
+				 </div>
+					<div id="akcii">
+						<h5>Преимущества:</h5>
+						<ul>
+						 <li> <span>- сотрудничаем с вашим региональным УГАДН</span></li>
+						 <li> <span>- расчет только после получения лицензии.</span></li>
+						 <li> <span>- низкая цена на оформление лицензии.</span></li>
+					</ul> </div>
+					<p class="downipdoc"> Весь список одним файлом: <a href="OOOdoc.docx"><span></span>  Скачть в формате .doc</a></p>
+			 </div>
+		 </div>
+		</div>
+	 </div>
+	<script>
+	let count = 3;
+	let position = 0;
+	let wrapper = document.querySelector('.slaidcomments');
+	let slide = wrapper.querySelector('.slide');
+	let slidelength = wrapper.querySelectorAll('.slide');
+	let arrows = document.getElementById('arrow_slide');
+	let width = slide.offsetWidth;
+	console.log(slide.offsetWidth);
+	arrows.onclick = function(e) {
+		 e.preventDefault();
+     let target = e.target;
+		 if(target.tagName != 'A') return;
+		 if(target.classList == 'leftarr') {
+			position += width;
+			position = Math.min(position, 0);
+			wrapper.style.left = position + 'px';
+		 }
+		 if(target.classList == 'rightarr') {
+			position -= width;
+			position = Math.max(position, -width * (slidelength.length - count));
+			wrapper.style.left = position + 'px';
+		 }
+	}
+
+	</script>
+</body>
+</html>

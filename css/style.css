@@ -48,7 +48,7 @@ header {
 #navbar {
 	padding: 5px 0;
 	display: grid;
-	grid-template-columns:  auto 45% auto;
+	grid-template-columns:  auto 50% auto;
 	justify-content: space-between;
 	align-items: center;
 	max-width: 1170px;
@@ -63,6 +63,9 @@ header {
 	justify-content: space-between;
 	grid-template-columns:  auto auto auto auto auto;
 }
+/* #nav-ul ul li {
+	padding-right: 10px;
+} */
 #nav-ul ul li a{
 	color: #000;
  }

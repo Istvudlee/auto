@@ -111,7 +111,7 @@ contentdiv.onclick = function(e) {
 };
 //Forma show 
 let blockforma = document.querySelector('.blockforma');
-let button_form = document.querySelectorAll('#buttonfirst, #buttonfifth, #buttonpenalty, #buttonsecond');
+let button_form = document.querySelectorAll('#buttonfirst, #buttonfifth, #buttonpenalty, #buttonsecond, #buttonscont');
 for (i = 0; i < button_form.length; i++) {
 	button_form[i].onclick = function(e) {
 		e.preventDefault();
@@ -131,4 +131,10 @@ fullfon.onclick = function() {
 	 }
 	}
 }
-//Form send
+//Mobile menu
+mobbar.onclick = function(e) {
+		let target = e.target;
+		if(target.tagName != "A") return;
+		mobbar.classList.toggle('activmob-nav-bar');
+}
+//

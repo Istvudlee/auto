@@ -258,6 +258,53 @@
 	margin-top: 40px;
 }
 /*  end fourth */
+* Company */
+#ocompany {
+	line-height: normal;
+	width: 100%;
+	margin-top: 50px;
+}
+#ocompany h3 {
+	text-align: center;
+	font-size: 24px;
+	color: #3C47AE;
+	font-family: 'Roboto', sans-serif;
+	text-transform: uppercase;
+}
+.workers {
+	display: grid;
+	justify-content: space-between;
+	grid-template-columns: 50% 24% 24%;
+	align-content: space-between;
+	max-width: 1170px;
+	margin: 30px auto 0;
+	grid-template-areas: 
+  	'a c d'
+    'a e f';
+}
+.workers div {
+	background: #3C47AE;
+	color: #fff;
+}
+.workers div img {
+	width: 100%;
+	border-bottom: 4px solid #3C47AE;
+}
+.workers div h6 {
+	padding-left: 5px;
+	text-transform: uppercase;
+	padding-top: 10px;
+	font-family: 'Roboto', sans-serif;
+}
+.workers div p {
+	padding-left: 5px;
+	padding-top: 3px;
+	padding-bottom: 2px;
+}
+.workers div:nth-child(1) {
+	grid-area: a;
+}
+/* End Company */
 		</style>
 </head>
 <body>
@@ -424,6 +471,37 @@
 		 </div>
 		</div>
 	 </div>
+	 <!-- Сотрудники -->
+	 <div id="ocompany">
+		<h3>Наши сотрудники</h3>
+		<div class="workers">
+			<div>
+				<img src="img/workers/11!.jpg" alt="">
+				<h6>Старший консультант</h6>
+				<p>Людмила Иванова</p>
+			</div>
+			<div>
+				<img src="img/workers/Belogolova.jpg" alt="">
+				<h6>Консультант</h6>
+				<p>Белоголов Николай</p>
+			</div>
+			<div>
+				<img src="img/workers/Molchanov.jpg" alt="">
+				<h6>Консультант</h6>
+				<p>Чайковский Денис</p>
+			</div>
+			<div>
+				<img src="img/workers/Lisitsyn.jpg" alt="">
+				<h6>Консультант</h6>
+				<p>Белов Алексей</p>
+			</div>
+			<div>
+				<img src="img/workers/chaykovskiy.jpg" alt="">
+				<h6>Консультант</h6>
+				<p>Маеркин Сергей</p>
+			</div>
+		</div>
+	</div>
 	<script>
 	let count = 3;
 	let position = 0;

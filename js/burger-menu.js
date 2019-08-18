@@ -9,6 +9,16 @@ burger.onclick = function() {
     htdy[i].classList.toggle('stopscroll');
 	}
 }
+//Mobile menu
+mobbar.onclick = function(e) {
+	let target = e.target;
+	if(target.tagName != "A") return;
+	mobbar.classList.toggle('activmob-nav-bar');
+	burger.classList.toggle('closemobburger');
+	for(i = 0; i < htdy.length; i++) {
+		htdy[i].classList.toggle('stopscroll');
+	}
+}
 // Табы (Дать на проверку)  = переписать под "делегировагие событий"
 let toogletab = document.getElementById('toogletab');
 let toogle = toogletab.querySelectorAll('#tog2, #tog1, #tog3');
@@ -132,13 +142,5 @@ fullfon.onclick = function() {
 	 }
 	}
 }
-//Mobile menu
-mobbar.onclick = function(e) {
-		let target = e.target;
-		if(target.tagName != "A") return;
-		mobbar.classList.toggle('activmob-nav-bar');
-		for(i = 0; i < htdy.length; i++) {
-			htdy[i].classList.toggle('stopscroll');
-		}
-}
+
 //

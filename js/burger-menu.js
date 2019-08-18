@@ -121,8 +121,7 @@ for (i = 0; i < button_form.length; i++) {
 		blockforma.style.top = document.documentElement.clientHeight/2 - blockforma.offsetHeight/2 +'px'
 	}
 }
-
-
+//Black full Screen
 fullfon.onclick = function() {
 	fullfon.classList.remove('fullopen');
 	blockforma.classList.add('show-form');
@@ -132,3 +131,4 @@ fullfon.onclick = function() {
 	 }
 	}
 }
+//Form send

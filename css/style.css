@@ -612,6 +612,7 @@ header {
 	cursor: pointer;
 	display: block;
 	width: 25%;
+	padding-right: 6px;
 }
 .imgl:hover {
   opacity: 0.5;
@@ -984,7 +985,9 @@ line-height: normal;
  }
  .lookpdf {
 	 background: #3C47AE;
-	 
+ }
+ .slide  img {
+		width: 100%;
  }
  .lookpdf a {
 	 padding: 10px 0px 10px 30px;
@@ -1033,42 +1036,46 @@ line-height: normal;
 	 line-height: 35px;
 	 padding: 10px 25px 0 14px;
  }
+ .afterotz {
+	 text-align: center;
+	 max-width: 1170px;
+	 margin: 30px auto;
+ }
  /* end Comments */
-/* Contacts */
-#contacts {
+/* Footer */
+footer {
+	font-size: 14px;
+	color: #000;
 	width: 100%;
-	line-height: normal;
-	margin-top: 50px;
+	background: #eee;
+	height: auto;
 }
-#contacts a {
-	 color: #3C47AE;
-	 border-bottom: 1px solid #3C47AE;
-	}
-#contacts a:hover{
-	border-bottom: none;
+.footerbl {
+	max-width: 1170px;
+	margin:0 auto;
+	padding-top: 15px;
+
+	padding-bottom: 10px;
 }
-#contacts h3{
-	text-align: center;
-	font-size: 24px;
-	color: #3C47AE;
-	font-family: 'Roboto', sans-serif;
-	text-transform: uppercase;
+footer a {
+	color: #000;
+	text-decoration: underline;
+}
+footer a:hover {
+	text-decoration: none;
 }
 .infor {
-	margin-top: 30px;
+	max-width: 1170px;
+	margin: 30px auto;
 	display: grid;
 	justify-content: space-between;
-	grid-template-columns: 50% 50%;
+	grid-template-columns: 35% 35% auto;
 }
 .imfo p{
-	font-size: 18px;
-	padding-bottom: 20px;
-	padding-left: 20px;
+	font-size: 16px;
+	padding-bottom: 10px;
 }
-.soc {
-	padding-left: 20px;
-}
-.soc h6{
+.soc p{
 	padding-bottom: 10px;
 }
 #contacts .oficial {
@@ -1077,32 +1084,28 @@ line-height: normal;
 	font-style: italic;
 	padding-top: 20px;
 }
-/* End Contacts */
-/* Footer */
-footer {
-	font-size: 14px;
-	color: #fff;
-	width: 100%;
+.infor #buttonscont {
+	display: block;
+	padding: 14px 18px 14px 18px;
+	border: 1px solid #3C47AE;
+	color:#fff;
+	width: 250px;
 	background: #3C47AE;
-	height: auto;
-}
-.footerbl {
-	max-width: 1170px;
-	margin:0 auto;
-	padding-top: 15px;
-	display: grid;
-	justify-content: space-between;
-	grid-template-columns: 20% 27%;
-	padding-bottom: 10px;
-}
-footer a {
-	color: #fff;
-	text-decoration: underline;
-}
-footer a:hover {
+	text-align: center;
+	text-transform: uppercase;
+	-webkit-transition: all .4s ease-in-out;
+	transition: all .4s ease;
+	margin-bottom: 10px;
 	text-decoration: none;
 }
-
+.infor #buttonscont:hover {
+	border: 1px solid #3C47AE;
+	color: #3C47AE;
+	background: #eee;
+}
+footer .processing {
+	font-size: 12px;
+}
 /* end Footer */
 .fullfon {
 	display: none;
@@ -1115,6 +1118,25 @@ footer a:hover {
 }
 .fullopen {
 	display: block;
+}
+.results {
+	position: fixed;
+	display: none;
+	top: 0;
+	left: 0;
+	text-align: center;
+	max-width: 500px;
+	padding: 40px;
+	background: #3C47AE;
+  color: #fff;
+}
+.results h6 {
+	font-size: 22px;
+	text-transform: uppercase;
+	padding-bottom: 10px;
+}
+.results p {
+	font-size: 16px;
 }
 /* Forma */
 .blockforma {
@@ -1167,6 +1189,8 @@ footer a:hover {
 	color: #000
 }
 /* end Forma */
+
+
 /* Мобильная */
 @media (max-width: 900px) {
 	#navbar {
@@ -1284,7 +1308,8 @@ footer a:hover {
     padding: 30px 4% 30px 4%;
  }
   .lookpdf a {
- 		padding: 10px 0px 10px 4%;
+		 padding: 10px 0px 10px 4%;
+		 font-size: 14px;
  }
  .leftarr {
 	 padding-left: 4%;
@@ -1364,6 +1389,10 @@ footer a:hover {
 		width: 100%;
 	}
 	/* end penalty */
+	.afterotz {
+		margin-top: 0;
+		margin-bottom: 30px;
+	}
 	/* Contacts */
 	#contacts {
   margin-top: 0;
@@ -1385,6 +1414,10 @@ footer a:hover {
 	#contacts .oficial {
 		padding-bottom: 10px;
 	}
+	.infor #buttonscont {
+		margin-top: 30px;
+		width: auto;
+	}
 	/* end Contact */
 	/* Footer */
 	.footerbl {
@@ -1397,6 +1430,9 @@ footer a:hover {
 	footer a {
 		padding-top: 20px;
 		padding-bottom: 20px;
+	}
+	.infor {
+		margin: 0;
 	}
 	/* end Footer */
 }

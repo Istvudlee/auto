@@ -680,7 +680,7 @@ header {
 	font-size: 14px;
 	padding-top: 20px;
 }
-.downipdoc {
+.passengerbl .downipdoc {
 	padding-top: 40px;
 }
 .downipdoc a {
@@ -692,7 +692,7 @@ header {
 	text-decoration: underline;
 }
 .downipdoc span{
-	background-image: url(../img/doc.svg);
+	background-image: url(../img/pdf.svg);
 	background-size : 30px 30px;
 	background-repeat: no-repeat;
   line-height: 30px;
@@ -942,7 +942,7 @@ line-height: normal;
 	color:#000;
 }
 #phoneget2 a:hover {
-	color:#fff;
+	color:#3C47AE;
 }
 /* End Company */
 /* Comments */

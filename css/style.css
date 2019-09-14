@@ -1427,16 +1427,10 @@ input[type="submit"] {
 	text-transform: uppercase;
 	color: #fff;
 	font-weight: bold;
-	-moz-background: #3C47AE;
-	-moz-border: 1px solid #fff;
-	-moz-text-transform: uppercase;
-	-moz-color: #fff;
-	-moz-font-weight: bold;
-	-webkit-background: #3C47AE;
-	-webkit-border: 1px solid #fff;
-	-webkit-text-transform: uppercase;
-	-webkit-color: #fff;
-	-webkit-font-weight: bold;
+	-webkit-appearance: none;
+	-moz-appearance:none;
+	-webkit-border-radius:0;
+	-moz-border-radius:0
 }
 
 input[type="submit"]:hover {

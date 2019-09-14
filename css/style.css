@@ -1430,7 +1430,7 @@ input[type="submit"] {
 	-webkit-appearance: none;
 	-moz-appearance:none;
 	-webkit-border-radius:0;
-	-moz-border-radius:0
+	-moz-border-radius:0;
 }
 
 input[type="submit"]:hover {

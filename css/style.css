@@ -1811,6 +1811,7 @@ button[type="submit"]:hover {
 		text-transform: uppercase;
 		color: #000;
 		margin-top: 10px;
+		cursor: pointer;
 	}
 
 	.close_mob_form p {

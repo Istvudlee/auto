@@ -141,10 +141,10 @@ fullfon.onclick = function() {
 		img[i].classList.remove("bigimg")
 	 }
 	}
-}
+};
 let closeMobForm = document.querySelector('.close_mob_form');
 closeMobForm.addEventListener('click', function(e) {
+	e.preventDefault();
 	fullfon.classList.remove('fullopen');
 	blockforma.classList.add('show-form');
 });
-//

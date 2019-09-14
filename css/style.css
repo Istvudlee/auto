@@ -1421,19 +1421,21 @@ footer .processing {
 	grid-template-columns: 92%;
 }
 
-input[type="submit"] {
+button[type="submit"] {
 	background: #3C47AE;
 	border: 1px solid #fff;
 	text-transform: uppercase;
 	color: #fff;
 	font-weight: bold;
+	margin-bottom: 5px;
+	padding: 15px;
 	-webkit-appearance: none;
 	-moz-appearance:none;
 	-webkit-border-radius:0;
 	-moz-border-radius:0;
 }
 
-input[type="submit"]:hover {
+button[type="submit"]:hover {
 	background: #fff;
 	border: 1px solid #fff;
 	color: #3C47AE;

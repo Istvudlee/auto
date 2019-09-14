@@ -221,7 +221,7 @@ header {
 }
 #intofirst h1 {
  padding-top: 25px;
- line-height: normal;
+ margin: 0;
  font-family: 'Roboto', sans-serif;
  font-size: 48px;
  letter-spacing: 1px;
@@ -233,8 +233,21 @@ header {
 	font-weight: 400;
 	font-size: 40px;
 }
-#intofirst img {
-	width: 100%;
+.wrap_video  {
+	max-width: 560px;
+	margin-top: 30px;
+}
+.wrap_video iframe {
+	border: 1px solid #fff;
+
+}
+.wrap_video p {
+	text-align: center;
+	font-size: 14px;
+	padding-bottom: 8px;
+	color: #fff;
+	padding-right: 0;
+	margin: 0;
 }
 .textfirst .help_text{
 	padding-top: 30px;
@@ -328,7 +341,7 @@ header {
 }
 .passengerbl p b{
 	color: #3C47AE;
-	font-size: 18px;
+	font-size: 20px;
 }
 .passengerbl h2 span {
 	border-left: 1px solid #3C47AE;
@@ -377,7 +390,6 @@ header {
 	left: 0;
 }
 .price {
-	padding-top: 25px;
 	padding-left: 40px;
 }
 .price::before {
@@ -389,6 +401,11 @@ header {
 	width: 100%;
 	height: 30px;
 	left: 0;
+}
+.warp_price {
+	background: #eee;
+	padding: 8px;
+	margin-top: 5px;
 }
 .passengerbl strong {
 	color: #333;
@@ -426,7 +443,7 @@ header {
 #buttonsecond:hover {
 	border: 1px solid #3C47AE;
 	color: #3C47AE;
-	background: #fff;
+	background: #eee;
 }
 .small span {
 	font-size: 12px;
@@ -487,6 +504,7 @@ header {
 } 
 .passengerbl .blackb {
 	color: #000;
+	font-size: 18px;
 }
 .passengerbl .redb {
 	color: #ea2626;
@@ -1126,15 +1144,16 @@ footer .processing {
 	display: block;
 }
 .results {
-	position: fixed;
 	display: none;
+	position: fixed;
 	top: 0;
 	left: 0;
 	text-align: center;
 	max-width: 500px;
 	padding: 40px;
 	background: #3C47AE;
-  color: #fff;
+	color: #fff;
+	z-index: 150;
 }
 .results h6 {
 	font-size: 22px;
@@ -1158,7 +1177,18 @@ footer .processing {
 	display: grid;
 	justify-content: space-evenly;
 	grid-template-columns: 92%;
-
+}
+input[type="submit"] {
+	background: #3C47AE;
+	border: 1px solid #fff;
+	text-transform: uppercase;
+	 color: #fff;
+	 font-weight: bold;
+}
+input[type="submit"]:hover {
+	background: #fff;
+	border: 1px solid #fff;
+	color: #3C47AE;
 }
 .show-form {
 	display: none;
@@ -1210,6 +1240,7 @@ footer .processing {
 		grid-template-columns: 42% 42%;
 		justify-content: space-evenly;
 	}
+
 	#intofirst h1{
     font-size: 38px;
 	}
@@ -1286,6 +1317,7 @@ footer .processing {
 }
 
 @media (max-width: 768px) {
+
 	.rasroch {
 		line-height: 1;
 		padding-bottom: 20px;
@@ -1352,6 +1384,9 @@ footer .processing {
 	#intofirst {
 			grid-template-columns: 92%;
 			justify-content: space-evenly;
+	}
+	.wrap_video {
+		 padding-bottom: 10px;
 	}
 	#buttonfirst {
 		  width: auto;
@@ -1441,6 +1476,54 @@ footer .processing {
 		margin: 0;
 	}
 	/* end Footer */
+	.close_mob_form {
+    padding: 6px;
+    width: auto;
+    text-align: center;
+    background:#fff;
+    text-transform: uppercase;
+    color: #000;
+    margin-top: 10px;
+  }
+  .close_mob_form p {
+    position: relative;
+    padding-left: 20px;
+  }
+  .close_mob_form p::before {
+    content: '';
+    background-image: url(../img/close.svg);
+    background-position-y: 2px;
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    width: 15px;
+    height: 20px;
+    position: absolute;
+    left: 19%;
+  }
+  .off {
+    display: initial;
+	}
+	.blockforma h5 {
+    padding-bottom: 20px;
+    padding-top: 40px;
+    
+	}
+	#textch {
+		padding-top: 20px;
+    padding-bottom: 20px;
+	}
+	input[type="submit"] {
+		-moz-background: #3C47AE;
+    -moz-border: 1px solid #fff;
+    -moz-text-transform: uppercase;
+    -moz-color: #fff;
+		-moz-font-weight: bold;
+		-webkit-background: #3C47AE;
+    -webkit-border: 1px solid #fff;
+    -webkit-text-transform: uppercase;
+    -webkit-color: #fff;
+		-webkit-font-weight: bold;
+}
 }
 @media (max-width:430px) {
 	#phoneandmail .mail {

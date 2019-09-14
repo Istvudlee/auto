@@ -142,5 +142,9 @@ fullfon.onclick = function() {
 	 }
 	}
 }
-
+let closeMobForm = document.querySelector('.close_mob_form');
+closeMobForm.addEventListener('click', function(e) {
+	fullfon.classList.remove('fullopen');
+	blockforma.classList.add('show-form');
+});
 //

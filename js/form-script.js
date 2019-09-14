@@ -7,11 +7,14 @@ $(document).ready(function(){
         url: "mail.php",
         data: form_data,
         success: function() {
-                  $('.blockforma').animate({opacity: 0}, 500, 
+                ym(53386576, 'reachGoal', 'order');
+                $('.blockforma').animate({opacity: 0}, 500, 
                     function () {
                 $(this).css('display', 'none');
-                $('.fullfon').fadeOut(2500);
-                $(".results").fadeIn("slow").delay(1500).fadeOut(500);
+                $('.fullfon').fadeOut(3200);
+                $(".results").offset({top:document.documentElement.clientHeight/2 - ($(".results").outerHeight())/2, left:document.documentElement.clientWidth/2 - ($(".results").outerWidth())/2})
+                $(".results").fadeIn("slow").delay(1200).fadeOut(500);
+
             }
          );
         }

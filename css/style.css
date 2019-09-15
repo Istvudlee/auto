@@ -1431,8 +1431,6 @@ button[type="submit"] {
 	padding: 15px;
 	-webkit-appearance: none;
 	-moz-appearance:none;
-	-webkit-border-radius:0;
-	-moz-border-radius:0;
 }
 
 button[type="submit"]:hover {
